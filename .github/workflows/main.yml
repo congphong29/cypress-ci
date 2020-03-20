@@ -22,4 +22,5 @@ jobs:
           node-version: '10'
       - uses: bahmutov/npm-install@v1
       - run: npm run build
-      - run: npx cypress run --record --key 640f5468-2572-4516-ae01-085790d5ec52
+      - name: run cypress record
+        run: npx cypress run --record --key 640f5468-2572-4516-ae01-085790d5ec52
