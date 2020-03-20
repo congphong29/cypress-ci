@@ -16,6 +16,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-    - run: npm run build --if-present
+    - run: npm run build 
     - run: npx cypress run --record --key 640f5468-2572-4516-ae01-085790d5ec52
