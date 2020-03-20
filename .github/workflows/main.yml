@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -17,9 +15,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-      - name: install npm
-        run: npm install
+      - run: npm install
       - run: npm run build
       - name: run cypress record
         run: npx cypress run --record --key 640f5468-2572-4516-ae01-085790d5ec52
